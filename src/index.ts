@@ -139,7 +139,7 @@ export function createVuePlugin(rawOptions: VueViteOptions = {}): Plugin {
       }
     },
 
-    async transform(code, id) {
+    async transform(code, id, transformOptions) {
       const { filename, query } = parseVueRequest(id)
 
       if (/\.(tsx|jsx)$/.test(id)) {
